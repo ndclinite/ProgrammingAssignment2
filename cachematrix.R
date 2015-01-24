@@ -1,7 +1,7 @@
 ## The following two functions will utilize
-## stored functions within lists and lexographical
-## scoping to create a "pseudo-matrix" which is
-## is capable of storing its inverse.
+## stored functions within lists and lexical
+## scoping to create a "pseudo-matrix" which
+## is capable of caching its inverse.
 
 ## This function makes a list that contains
 ## a matrix (x) and its inverse (y)
@@ -23,8 +23,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## This is the thingy that checks if the matrix is inverted
-## If it is, it returns its stored inversion
+## This is the thingy that checks if the matrix
+## has a cached inversion.
+## If it is, it returns its cached inversion.
 ## If it is not, it tells the matrix to invert itself.
 
 cacheSolve <- function(x, ...) {
